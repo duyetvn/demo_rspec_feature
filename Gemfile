@@ -18,24 +18,14 @@ gem 'nprogress-rails'
 gem "jquery-turbolinks"
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-group :development, :test do
-  gem 'byebug'
-  gem 'pry'
-  gem 'faker'
-  gem 'rspec-rails', '~> 3.5'
-  gem 'factory_girl_rails'
-  gem 'capybara'
-  gem "selenium-webdriver"
-  gem 'database_cleaner'
-  gem 'rspec-wait', '~> 0.0.8'
-end
-
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
+  gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'awesome_print'
   gem 'meta_request'
   gem 'brakeman', :require => false
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :staging, :development do
