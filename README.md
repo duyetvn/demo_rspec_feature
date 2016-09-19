@@ -4,4 +4,6 @@
 
   ruby:   2.3.1
 
-  rails:  4.2.6
+  rails:  5.0.0
+
+  db: mysql
