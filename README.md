@@ -1,8 +1,9 @@
-== README
+# README
 
-# The  template for rails project
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-  ruby:   2.3.1
+Things you may want to cover:
 
   rails:  5.0.0
 
