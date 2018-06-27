@@ -23,6 +23,7 @@ require 'capybara/rails'
 # require only the support files necessary.
 #
 # Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/supports/*.rb')].each { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
@@ -56,6 +57,9 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  config.include AuthenticationHelpers
+
   config.before :each do
     if Capybara.current_driver == :rack_test
       DatabaseCleaner.strategy = :transaction
@@ -71,5 +75,7 @@ RSpec.configure do |config|
 
   Capybara.ignore_hidden_elements = false
 
-  Capybara.default_driver = :selenium
+  # Capybara.default_driver = :selenium
+
+  config.include Warden::Test::Helpers
 end
