@@ -18,6 +18,8 @@ gem 'nprogress-rails'
 gem "jquery-turbolinks"
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'devise'
+
 group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
